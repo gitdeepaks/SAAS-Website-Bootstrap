@@ -4,7 +4,7 @@
 
 .header {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url("../images/header-background.jpg") left center no-repeat;
   background-size: cover;
   height: 600px;
@@ -15,6 +15,15 @@
   width: 24px;
 }
 
+.hr-heading {
+  display: inline-block;
+  width: 3.5rem;
+  height: 0.125rem;
+  margin-top: 0.625rem;
+  border: none;
+  background-color: #fe6b2a;
+  opacity: 1;
+}
 @media (max-width: 992px) {
   .xl-text {
     font-size: 50px;
