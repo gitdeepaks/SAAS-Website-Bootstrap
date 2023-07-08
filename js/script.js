@@ -28,4 +28,29 @@ function userScroll() {
   });
 }
 
+// Video Modal
+const videoBtn = document.querySelector(".video-btn");
+const videoModal = document.querySelector("#videoModal");
+const video = document.querySelector("#video");
+let videoSrc;
+
+if (videoBtn !== null) {
+  videoBtn.addEventListener("click", function (e) {
+    videoSrc = videoBtn.getAttribute("data-bs-src");
+  });
+}
+
+if (videoModal !== null) {
+  videoModal.addEventListener("shown.bs.modal", (e) => {
+    video.setAttribute(
+      "src",
+      videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
+    );
+  });
+
+  videoModal.addEventListener("hide.bs.modal", (e) => {
+    video.setAttribute("src", videoSrc);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", userScroll);
